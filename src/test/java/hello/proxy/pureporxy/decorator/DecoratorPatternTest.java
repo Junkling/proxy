@@ -28,6 +28,6 @@ public class DecoratorPatternTest {
         Component timeDeco = new TimeDecorator(messageDeco);
         DecoratorPatternClient client = new DecoratorPatternClient(timeDeco);
         client.execute();
-        
+
     }
 }
