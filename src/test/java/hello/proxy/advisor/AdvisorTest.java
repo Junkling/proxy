@@ -27,13 +27,14 @@ public class AdvisorTest {
     }
 
     @Test
-    @DisplayName("포인트컷 추가")
+    @DisplayName("직접 포인트컷 추가")
     void advisorTest2() {
         ServiceInterface target = new ServiceImpl();
         ProxyFactory proxyFactory = new ProxyFactory(target);
         proxyFactory.addAdvisor(new DefaultPointcutAdvisor(new MyPoint(), new TimeAdvice()));
         ServiceInterface proxy = (ServiceInterface) proxyFactory.getProxy();
         proxy.save();
+        proxy.find();
     }
     @Test
     @DisplayName("스프링 포인트컷")

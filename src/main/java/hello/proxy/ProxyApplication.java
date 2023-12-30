@@ -19,14 +19,17 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
 //@Import(AppV1Config.class)
+//@Import(AppV2Config.class)
 //@Import({AppV1Config.class, AppV2Config.class})
+
+//@Import(InterfaceProxyConfig.class)
 //@Import({InterfaceProxyConfig.class, ConcreteProxyConfig.class})
 //@Import(DynamicProxyBasicConfig.class)
 //@Import(DynamicProxyFilterConfig.class)
 //@Import({ProxyFactoryConfigV1.class, ProxyFactoryConfigV2.class})
 //@Import(BeanPostProcessorConfig.class)
-//@Import(AutoProxyConfig.class)
-@Import(AopConfig.class)
+@Import(AutoProxyConfig.class)
+//@Import(AopConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.proxy.app") //주의
 public class ProxyApplication {
 

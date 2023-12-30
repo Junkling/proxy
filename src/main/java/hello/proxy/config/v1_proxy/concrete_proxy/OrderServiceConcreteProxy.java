@@ -11,7 +11,11 @@ public class OrderServiceConcreteProxy extends OrderServiceV2 {
     private final LogTrace logTrace;
 
     public OrderServiceConcreteProxy(OrderServiceV2 target, LogTrace logTrace) {
+        //부모의 생성자를 호출해야한다.
+        // 하지만 프록시클래스에서는 기능만 사용할 것이기 때문에
+        // 부모의 인스턴스를 넣어줄 필요가 없어 null 을 넣어준다
         super(null);
+
         this.target = target;
         this.logTrace = logTrace;
     }
